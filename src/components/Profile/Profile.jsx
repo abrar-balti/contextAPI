@@ -1,10 +1,10 @@
-import { React, useContext } from "react";
-import { UserContext } from "../context/userContext";
+import { React } from "react";
+import { useUserContext } from "../context/index";
 const Profile = () => {
-  const { userdata } = useContext(UserContext);
+  const { userData } = useUserContext();
   return (
     <div>
-      <span className="text-red-300 font-bold">Profile:</span> {userdata.email}
+      <span className="text-red-300 font-bold">Profile:</span> {userData.email}
     </div>
   );
 };
